@@ -123,36 +123,36 @@ public class HomePractice {
 //
 ////        //Calculate the sum of digits (with scanner)
         Scanner scanner = new Scanner(System.in); //scanner object creation
-//        System.out.println("---Here starts the first Math Scanner exercise--");
-//        System.out.println("Add a value for the radius of the circle: "); //prompt scanner creation
-//
-//        double radius = scanner.nextDouble(); //read the radius as a double with .nextDouble() function
-//
-//        double areaCircle = Math.PI * radius * radius; // PI * R square
-//        System.out.println("The area of the circle is: " + areaCircle); //print
-//        System.out.println("---The first exercise is complete---");
-//
-//
-////        //Multiple math operations using Scanner
-//        System.out.println("--Here starts the second Math Scanner exercise--");
-//        System.out.println("Insert the first number (e.g. double): "); //adding the first number
-//        double firstNumber = scanner.nextDouble(); //read the first number
-//        System.out.println("Insert the second number: "); //adding the second number
-//        double secondNumber = scanner.nextDouble(); //read the first number
-//
-//
-//        double sum = firstNumber + secondNumber; //calculating the sum
-//        double diff = firstNumber - secondNumber; //calculating the difference
-//        double product = firstNumber * secondNumber; //calculating the product
-//        double division = firstNumber / secondNumber; //calculating the division
-//
-//        System.out.println("Sum: " + sum);
-//        System.out.println("Difference: " + diff);
-//        System.out.println("Product: " + product);
-//        System.out.println("Division: " + division);
-//        System.out.println("---The second exercise is complete--");
-//
-//
+        System.out.println("---Here starts the first Math Scanner exercise--");
+        System.out.println("Add a value for the radius of the circle: "); //prompt scanner creation
+
+        double radius = scanner.nextDouble(); //read the radius as a double with .nextDouble() function
+
+        double areaCircle = Math.PI * radius * radius; // PI * R square
+        System.out.println("The area of the circle is: " + areaCircle); //print
+        System.out.println("---The first exercise is complete---");
+
+
+//       //Multiple math operations using Scanner
+        System.out.println("--Here starts the second Math Scanner exercise--");
+        System.out.println("Insert the first number (e.g. double): "); //adding the first number
+        double firstNumber = scanner.nextDouble(); //read the first number
+        System.out.println("Insert the second number: "); //adding the second number
+        double secondNumber = scanner.nextDouble(); //read the first number
+
+
+        double sum = firstNumber + secondNumber; //calculating the sum
+        double diff = firstNumber - secondNumber; //calculating the difference
+        double product = firstNumber * secondNumber; //calculating the product
+        double division = firstNumber / secondNumber; //calculating the division
+
+        System.out.println("Sum: " + sum);
+        System.out.println("Difference: " + diff);
+        System.out.println("Product: " + product);
+        System.out.println("Division: " + division);
+        System.out.println("---The second exercise is complete--");
+
+
 //        //Boolean exercises
 //        boolean greenLight = true;
 //        boolean pedestrian = false;
