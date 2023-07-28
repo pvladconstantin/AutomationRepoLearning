@@ -1,13 +1,9 @@
 package starter;
 
-import org.apache.bcel.classfile.SourceFile;
-
-import java.math.BigDecimal;
-import java.sql.SQLOutput;
 import java.util.Random;
 import java.util.Scanner;
 
-public class HomePractice {
+public class HomePracticeSprint1 {
     public static void main(String[] args) {
 
 //        //Learning about chars, byte, long, short, int, float, double
@@ -285,6 +281,7 @@ public class HomePractice {
 
     }
 
+
     public static boolean getYesOrNo(String question) {
         Scanner scanner = new Scanner(System.in); //scanner object creation
 
@@ -303,6 +300,6 @@ public class HomePractice {
                 return false;
             }
         }
-   }
+    }
 }
 
