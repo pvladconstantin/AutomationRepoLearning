@@ -1,5 +1,6 @@
 package starter.AutomationTests;
 
+import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -26,6 +27,11 @@ public class StepsDefinition {
     public void responseCode(Integer statusCode) {
         Integer actualStatusCode = SerenityRest.lastResponse().getStatusCode();
         Assert.assertEquals(statusCode,actualStatusCode);
+    }
+
+    @And("^the query param: (.*) = (.*)$")
+    public void addQueryParam(String queryParamName, String queryParamValue) {
+        rq.queryParam(queryParamName, queryParamValue);
     }
 
 }
