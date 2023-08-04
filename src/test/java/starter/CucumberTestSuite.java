@@ -7,8 +7,10 @@ import org.junit.runner.RunWith;
 
 @RunWith(CucumberWithSerenity.class)
 @CucumberOptions(
-        tags = "@FIRST",
+        tags = "@asd",
         plugin = {"pretty"},
         features = "classpath:features/"
 )
 public class CucumberTestSuite {}
+
+//RUN WITH JAVA 16 or otherwise will crash

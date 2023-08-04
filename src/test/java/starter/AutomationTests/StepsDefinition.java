@@ -1,5 +1,7 @@
 package starter.AutomationTests;
 
+import com.google.gson.JsonArray;
+import com.google.gson.JsonObject;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -37,14 +39,15 @@ public class StepsDefinition {
     @And("^the response contains: (.*)$")
     public void responseBody(String response) {
         String responseBody = SerenityRest.lastResponse().getBody().asString();
-        Assert.assertTrue("Expected result does not match actual: " + response + " " + responseBody,
-                responseBody.contains(response));
-
-
-//        Assert.assertTrue("Expected result does not match actual: " + value + " " + responseBody,
-//                responseBody.contains(value));
-
-
+        Assert.assertTrue("Expected result does not match actual: " + response + " " + responseBody, responseBody.contains(response));
     }
+
+    @And("^the response has: (.*) = (.*)$")
+    public void responseJson(String key, String value) {
+        String response = SerenityRest.lastResponse().getBody().asString();
+        JsonArray jso = Util.stringToJson(response);
+    }
+
+
 
 }
