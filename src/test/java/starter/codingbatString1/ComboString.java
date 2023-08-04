@@ -4,15 +4,20 @@ public class ComboString {
     String a = "Hello";
     String b = "hi";
 
+    public String method() {
+        if (a.length() < b.length()) {
+            return a + b + a;
+        } else if (a.length() > b.length()) {
+            return b + a + b;
+        } else {
+            return "";
+        }
+    }
+
+
     public static void main(String[] args) {
         ComboString c = new ComboString();
 
-        if (c.a.length() < c.b.length()) {
-            System.out.println(c.a + c.b + c.a);
-        } else if (c.a.length() > c.b.length()) {
-            System.out.println(c.b + c.a + c.b);
-        } else {
-            System.out.println("");
-        }
+        System.out.println(c.method());
     }
 }
