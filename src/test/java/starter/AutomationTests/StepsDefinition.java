@@ -34,13 +34,15 @@ public class StepsDefinition {
         rq.queryParam(queryParamName, queryParamValue);
     }
 
-    @And("^the response contains: (.*) : (.*)$")
-    public void responseBody(String key, String value) {
+    @And("^the response contains: (.*)$")
+    public void responseBody(String response) {
         String responseBody = SerenityRest.lastResponse().getBody().asString();
-        Assert.assertTrue("Expected result does not match actual: " + key + " " + responseBody,
-                responseBody.contains(key));
-        Assert.assertTrue("Expected result does not match actual: " + value + " " + responseBody,
-                responseBody.contains(value));
+        Assert.assertTrue("Expected result does not match actual: " + response + " " + responseBody,
+                responseBody.contains(response));
+
+
+//        Assert.assertTrue("Expected result does not match actual: " + value + " " + responseBody,
+//                responseBody.contains(value));
 
 
     }
