@@ -1,4 +1,4 @@
-package starter.InheritanceChallenge1;
+package starter.InheritanceChallengeWorkers;
 
 public class HourlyEmployee extends Employee {
     private double hourlyPayRate;

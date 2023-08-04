@@ -1,6 +1,4 @@
-package starter.InheritanceChallenge1;
-
-import java.util.Objects;
+package starter.InheritanceChallengeWorkers;
 
 public class Main {
     public static void main(String[] args) {
