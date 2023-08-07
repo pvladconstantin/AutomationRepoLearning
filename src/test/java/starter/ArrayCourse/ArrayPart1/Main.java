@@ -1,6 +1,4 @@
-package starter.ArrayPart1;
-
-import org.jruby.ext.jruby.CoreExt;
+package starter.ArrayCourse.ArrayPart1;
 
 import java.util.Arrays;
 

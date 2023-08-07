@@ -1,7 +1,5 @@
 package starter.codingbatArray1;
 
-import org.mockito.internal.matchers.Same;
-
 public class SameFirstLast {
 
     public boolean SameFirstLast(int[] nums) {

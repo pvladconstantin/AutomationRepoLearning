@@ -1,6 +1,5 @@
-package starter.ArrayChallenge1;
+package starter.ArrayCourse.ArrayChallenge1;
 
-import java.sql.Array;
 import java.util.Arrays;
 import java.util.Random;
 

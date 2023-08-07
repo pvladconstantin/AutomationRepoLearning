@@ -1,4 +1,4 @@
-package starter.ArrayPart2;
+package starter.ArrayCourse.ArrayPart2;
 
 import java.util.Arrays;
 import java.util.Random;
