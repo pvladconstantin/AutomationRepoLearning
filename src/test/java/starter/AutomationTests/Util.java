@@ -2,6 +2,7 @@ package starter.AutomationTests;
 
 import com.google.gson.Gson;
 import com.google.gson.JsonArray;
+import com.google.gson.JsonObject;
 
 public class Util {
 
@@ -12,4 +13,11 @@ public class Util {
 //        }
         return jsonArray;
     }
+
+    //metoda care sa faca din string json object
+    public static JsonObject stringToJsonObject(String jsonString) {
+        JsonObject jsonObject = new Gson().fromJson(jsonString, JsonObject.class);
+        return jsonObject;
+    }
+
 }
