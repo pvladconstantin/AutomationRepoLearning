@@ -12,5 +12,5 @@ Feature: SimpleBookAPI endpoints that require NotLoggedIn
     And the query param: type = fiction
     When I perform GET call to it
     Then the response should be 200
-    And the response has: type = fiction
+    And the response JSON Array has: type = fiction
 

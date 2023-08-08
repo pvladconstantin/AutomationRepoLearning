@@ -1,6 +1,7 @@
 package starter.AutomationTests;
 
 import com.google.gson.JsonArray;
+import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
@@ -28,7 +29,7 @@ public class StepsDefinition {
     @Then("^the response should be (.*)$")
     public void responseCode(Integer statusCode) {
         Integer actualStatusCode = SerenityRest.lastResponse().getStatusCode();
-        Assert.assertEquals(statusCode,actualStatusCode);
+        Assert.assertEquals(statusCode, actualStatusCode);
     }
 
     @And("^the query param: (.*) = (.*)$")
@@ -42,12 +43,30 @@ public class StepsDefinition {
         Assert.assertTrue("Expected result does not match actual: " + response + " " + responseBody, responseBody.contains(response));
     }
 
-    @And("^the response has: (.*) = (.*)$")
-    public void responseJson(String key, String value) {
+    @And("^the response JSON Array has: (.*) = (.*)$")
+    public void responseJsonArray(String key, String value) {
+
         String response = SerenityRest.lastResponse().getBody().asString();
-        JsonArray jso = Util.stringToJson(response);
+        JsonArray jsa = Util.stringToJson(response);
+
+        for (JsonElement je : jsa) {
+            JsonObject jsonObject = je.getAsJsonObject();
+            String actualValue = jsonObject.get(key).getAsString();
+            Assert.assertTrue("Expected result does not match actual: " + value + " " + actualValue, value.equals(actualValue));
+        }
     }
 
+    @And("^the response JSON Object has: (.*) = (.*)$")
+    public void responseJsonObject(String key, String value) {
 
+        String response = SerenityRest.lastResponse().getBody().asString();
+        JsonObject jsonObject = Util.stringToJsonObject(response);
 
+        String actualValue = jsonObject.get(key).getAsString();
+        Assert.assertTrue("Expected result does not match actual: " + value + " " + actualValue, value.equals(actualValue));
+    }
 }
+
+
+
+
