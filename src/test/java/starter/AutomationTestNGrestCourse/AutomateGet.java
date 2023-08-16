@@ -1,21 +1,13 @@
-package starter.AutomationTestNGrest;
+package starter.AutomationTestNGrestCourse;
 
-import io.restassured.RestAssured;
-import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
 import org.junit.Assert;
-import org.openqa.selenium.json.Json;
 import org.testng.annotations.Test;
-
-import java.util.List;
-import java.util.Map;
 
 import static io.restassured.RestAssured.given;
 
-import static org.hamcrest.CoreMatchers.equalTo;
 import static org.hamcrest.CoreMatchers.hasItems;
 import static org.hamcrest.MatcherAssert.assertThat;
-import static org.hamcrest.Matchers.*;
 
 public class AutomateGet {
 
