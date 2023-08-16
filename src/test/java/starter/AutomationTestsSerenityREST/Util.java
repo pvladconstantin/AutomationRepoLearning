@@ -1,4 +1,4 @@
-package starter.AutomationTests;
+package starter.AutomationTestsSerenityREST;
 
 import com.google.gson.Gson;
 import com.google.gson.JsonArray;

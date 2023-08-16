@@ -1,4 +1,4 @@
-package starter.AutomationTests;
+package starter.AutomationTestsSerenityREST;
 
 import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
@@ -10,6 +10,7 @@ import io.cucumber.java.en.When;
 import io.restassured.specification.RequestSpecification;
 import net.serenitybdd.rest.SerenityRest;
 import org.junit.Assert;
+import static io.restassured.RestAssured.given;
 
 public class StepsDefinition {
 
@@ -18,7 +19,6 @@ public class StepsDefinition {
     @Given("^the url: (.*)$")
     public void setURL(String url) {
         rq = SerenityRest.given().baseUri(url).log().all();
-
     }
 
     @When("^I perform GET call to it$")
